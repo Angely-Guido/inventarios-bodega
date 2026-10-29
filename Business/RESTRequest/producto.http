@@ -1,0 +1,32 @@
+@host = http://localhost:9090/api
+@uri = {{host}}/productos
+
+GET {{uri}}
+###
+
+GET {{uri}}
+###
+
+POST {{uri}}
+Content-Type: application/json
+
+{
+    "sku" : "2346",
+    "nombre_producto" : "Madera de pino",
+    "descripcion" : "Madera de pino tratada",
+    "precio_unitario" : "3500",
+    "stock_actual" : "20",
+    "categoria" : "Materiales"
+}
+###
+
+PUT {{uri}}/1
+Content-Type: application/json
+
+{
+    "nombre_producto" : "Madera de roble",
+}
+###
+
+DELETE {{uri}}/5
+###

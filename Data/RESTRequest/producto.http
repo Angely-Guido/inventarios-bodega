@@ -1,0 +1,29 @@
+@host = http://localhost:8090/api 
+@uri = {{host}}/productos
+
+GET {{uri}}
+###
+
+POST {{uri}}
+Content-Type: application/json
+
+{
+    "sku" : "2345",
+    "nombre_producto" : "Madera",
+    "descripcion" : "Madera de roble de alta calidad",
+    "precio_unitario" : "5000",
+    "stock_actual" : "10",
+    "categoria" : "Materiales"
+}
+###
+
+PUT {{uri}}/1
+Content-Type: application/json
+
+{
+    "nombre_producto" : "Madera Negra"
+}
+###
+
+DELETE {{uri}}/1
+###
